@@ -1,5 +1,11 @@
 box: debian:latest
 
+build:
+  steps:
+    - script:
+      name: print distro info
+      code: cat /etc/*release
+
 deploy:
   steps:
     - scp-deploy:
