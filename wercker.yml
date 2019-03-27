@@ -12,7 +12,7 @@ deploy:
   steps:
     - install-packages:
       packages: openssh-client
-    - mrdeedee/scp-deploy@0.0.3:
+    - mrdeedee/scp-deploy@0.0.4:
       host: ec2-35-176-228-218.eu-west-2.compute.amazonaws.com
       sshprivatekey: $PK_FILE
       user: ec2-user
