@@ -1,4 +1,4 @@
-box: centos:latest
+box: debian:latest
 
 build:
   steps:
