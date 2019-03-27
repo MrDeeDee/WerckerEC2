@@ -5,6 +5,8 @@ build:
     - script:
       name: print distro info
       code: cat /etc/*release
+    - install-packages:
+      packages: openssh-client 
 
 deploy:
   steps:
