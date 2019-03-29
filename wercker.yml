@@ -24,4 +24,4 @@ deploy:
       user: ec2-user
       source: ./index.html
       destination: "/var/www"
-      hide-ssh-cnx-info-from-log: false
+      hide-ssh-cnx-info-from-log: true
