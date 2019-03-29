@@ -20,7 +20,7 @@ deploy:
     #   code: echo $PK_FILE >> $HOME/.ssh/id_rsa
     - mrdeedee/scp-deploy@0.0.5:
       host: ec2-35-176-228-218.eu-west-2.compute.amazonaws.com
-      sshprivatekey: $HOME/.ssh/id_rsa
+      sshprivatekey: $PK_FILE
       user: ec2-user
       source: ./index.html
       destination: "/var/www"
