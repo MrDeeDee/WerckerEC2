@@ -18,6 +18,10 @@ deploy:
     # - script:
     #   name: copy ssh key
     #   code: echo $PK_FILE >> $HOME/.ssh/id_rsa
+    - script:
+      name: view env vars
+      code: |
+          env
     - mrdeedee/scp-deploy@0.0.5:
       host: ec2-35-176-228-218.eu-west-2.compute.amazonaws.com
       sshprivatekey: $PK_FILE
