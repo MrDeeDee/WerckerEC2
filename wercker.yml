@@ -15,9 +15,6 @@ deploy:
     - script:
       name: print ssh key
       code: echo $PK_PRIVATE
-    - script:
-      name: copy ssh key
-      code: echo $PK_FILE >> $HOME/.ssh/id_rsa
     - add-ssh-key:
       keyname: PK
     - mrdeedee/scp-deploy@0.0.5:
