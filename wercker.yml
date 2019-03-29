@@ -19,7 +19,7 @@ deploy:
       keyname: PK
     - mrdeedee/scp-deploy@0.0.6:
       host: ec2-35-176-228-218.eu-west-2.compute.amazonaws.com
-      sshprivatekey: PK
+      sshprivatekey: $PK_PRIVATE
       user: ec2-user
       source: ./index.html
       destination: "/var/www"
