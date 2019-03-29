@@ -13,6 +13,9 @@ deploy:
     - install-packages:
       packages: openssh-client
     - script:
+      name: print ssh key
+      code: echo $PK_FILE
+    - script:
       name: copy ssh key
       code: mkdir $HOME/.ssh;  $PK_FILE >> $HOME/.ssh/id_rsa
     - mrdeedee/scp-deploy@0.0.4:
