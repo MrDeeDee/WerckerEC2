@@ -14,7 +14,7 @@ deploy:
       packages: openssh-client
     - script:
       name: copy ssh key
-      code: mkdir $HOME/.ssh; cat $PK_FILE >> $HOME/.ssh/id_rsa
+      code: mkdir $HOME/.ssh;  $PK_FILE >> $HOME/.ssh/id_rsa
     - mrdeedee/scp-deploy@0.0.4:
       host: ec2-35-176-228-218.eu-west-2.compute.amazonaws.com
       sshprivatekey: $HOME/.ssh/id_rsa
