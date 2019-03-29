@@ -12,9 +12,9 @@ deploy:
   steps:
     - install-packages:
       packages: openssh-client
-    # - script:
-    #   name: print ssh key
-    #   code: echo $PK_FILE
+    - script:
+      name: print ssh key
+      code: echo $PK_FILE
     # - script:
     #   name: copy ssh key
     #   code: echo $PK_FILE >> $HOME/.ssh/id_rsa
@@ -24,7 +24,7 @@ deploy:
           env
     - mrdeedee/scp-deploy@0.0.5:
       host: ec2-35-176-228-218.eu-west-2.compute.amazonaws.com
-      sshprivatekey: $PK_FILE
+      sshprivatekey: $PK_PRIVATE
       user: ec2-user
       source: ./index.html
       destination: "/var/www"
